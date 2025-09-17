@@ -1,0 +1,58 @@
+<div class="product-card" style="width: 100%;">
+
+  <!-- Entire product card clickable -->
+  <div
+    style="cursor: pointer;"
+    routerLink="/checkout">
+
+    <div class="container py-5">
+      <h2 class="mb-5 text-center fw-bold text-primary">💳 Checkout</h2>
+
+      <div class="row g-4">
+        <!-- Products List -->
+        <div class="col-lg-8">
+          <div class="card shadow-sm rounded-4 p-4">
+            <h4 class="mb-4 fw-bold">Your Order</h4>
+
+
+            @for (item of cartService.getItem(); track item.id) {
+              <!-- Example Product 1 -->
+              <div class="d-flex align-items-center mb-3 p-3 border rounded-3">
+                <img src="{{item.imageUrl}}" alt="{{item.name}}" class="rounded me-3" style="width: 80px; height: 80px; object-fit: cover;">
+                <div class="flex-grow-1">
+                  <div class="fw-semibold fs-5">{{item.name}}</div>
+                  <div class="text-success fw-bold">{{item.price | currency}} x {{item.qty | number}}</div>
+                </div>
+                <div class="fw-bold fs-5">{{item.price * item.qty | currency}}</div>
+              </div>
+            }
+
+
+          </div>
+        </div>
+
+        <!-- Order Summary -->
+        <div class="col-lg-4">
+          <div class="card shadow-lg rounded-4 p-4" style="background: linear-gradient(135deg, #5d2c77, #6b2aa3); color:rgb(50, 26, 85);">
+            <h4 class="mb-4 fw-bold">Order Summary</h4>
+            <div class="d-flex justify-content-between mb-2">
+              <span>Items Total</span>
+              <span>{{cartService.getTotal() | currency}}</span>
+            </div>
+            <div class="d-flex justify-content-between mb-2">
+              <span>Shipping</span>
+              <span></span>
+            </div>
+            <hr class="border-white">
+            <div class="d-flex justify-content-between fw-bold fs-5 mb-4">
+              <span>Grand Total</span>
+              <span>{{cartService.getTotal() | currency}}</span>
+            </div>
+            <button class="btn btn-light w-100 py-2 fw-bold shadow-sm rounded-pill text-primary">
+              Confirm & Place Order
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

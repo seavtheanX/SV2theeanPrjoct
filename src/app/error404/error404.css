@@ -1,0 +1,5 @@
+body { background: #f8f9fa; display: flex; align-items: center; justify-content: center; height: 100vh; }
+.error-container { text-align: center; }
+.error-code { font-size: 8rem; font-weight: 700; color: #ff0000; }
+.error-message { font-size: 1.5rem; color: #6c757d; }
+.btn-home { margin-top: 20px; }

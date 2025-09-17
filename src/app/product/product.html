@@ -1,0 +1,16 @@
+<!-- product cart -->
+<div class="row">
+  @for (product of products.getProducts(); track product.id) {
+    <app-product-card [product]="product" (addToCart)="onAddToCart($event)" class="col-lg-3 col-md-3 col-sm-6 mt-4"></app-product-card>
+  }
+</div>
+<!-- product cart -->
+<div class="row">
+  <app-product-card
+    routerLink="/product"
+    *ngFor="let product of products.getProducts()"
+    [product]="product"
+    (addToCart)="onAddToCart($event)"
+    class="col-lg-3 col-md-3 col-sm-6 mt-4">
+  </app-product-card>
+</div>

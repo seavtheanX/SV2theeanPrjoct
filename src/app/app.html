@@ -1,0 +1,95 @@
+<div class="container">
+  <!-- top Menu -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" routerLink="/">CAR Shop</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/product">Product</a>
+        </li><object data="" type=""></object>
+      </ul>
+      <!-- <input
+    class="form-control mr-sm-2"
+    type="search"
+    placeholder="Search"
+    [(ngModel)]="searchText"
+    (keyup.enter)="searchProduct()"
+    aria-label="Search"
+  />
+  <button class="btn btn-outline-success my-2 my-sm-0" (click)="searchProduct()">Search</button> -->
+      <button class="btn btn-outline-success my-2 my-sm-0" routerLink="/cart">Cart({{cartService.getItem().length}})</button>
+    </div>
+  </nav>
+  <router-outlet />
+
+  <!-- footer -->
+  <footer class="modern-footer">
+    <div class="container">
+      <div class="row">
+
+        <!-- Brand/About Section -->
+        <div class="col-lg-4 col-md-6 footer-col text-center text-md-start">
+          <div class="footer-brand">
+            <h5>Thean Car Shop</h5>
+            <p>In joy with car Shop and Buy what car you like.</p>
+          </div>
+          <div class="payment-methods justify-content-center justify-content-md-start">
+            <span class="payment-icon">Visa</span>
+            <span class="payment-icon">PayPal</span>
+            <span class="payment-icon">MasterCard</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-lg-2 col-md-6 footer-col text-center text-md-start">
+          <h5 class="footer-heading">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Cart</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Connect Section -->
+        <div class="col-lg-3 col-md-6 footer-col text-center text-md-start">
+          <h5 class="footer-heading">Connect With Us</h5>
+          <div class="social-icons justify-content-center justify-content-md-start">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+
+          <h5 class="footer-heading mt-4">Newsletter</h5>
+          <div class="newsletter-form mx-auto ms-md-0">
+            <input type="email" placeholder="Your email">
+            <button type="submit"><i class="bi bi-send"></i></button>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-3 col-md-6 footer-col text-center text-md-start">
+          <h5 class="footer-heading">Contact Info</h5>
+          <ul class="footer-links">
+            <li><i class="bi bi-envelope me-2"></i> info@carShop.com</li>
+            <li><i class="bi bi-telephone me-2"></i> (123) 456-7890</li>
+            <li><i class="bi bi-geo-alt me-2"></i> 168 Car shop, City</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p class="mb-0">© CAR SHOP. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
